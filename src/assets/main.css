@@ -1,0 +1,114 @@
+:root {
+  --cell-bg: #fff;
+  --related-bg: #eef2f8;
+  --same-bg: #dbe6f7;
+  --selected-bg: #bcd3f5;
+  --selected-outline: #2f6fdd;
+  --grid-line: #9aa5b5;
+  --box-line: #1f2937;
+  --given-color: #111827;
+  --user-color: #1d4ed8;
+  --notes-color: #6b7280;
+  --error-color: #dc2626;
+  --ok-color: #15803d;
+  --hint-bg: #fffbe6;
+  --hint-line: #e0b400;
+  --hint-cell-bg: #ffe58a;
+  --hint-target-bg: #ffb3a7;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* Modern default look for plain buttons and selects. Buttons with their own class (cards, cells) opt out. */
+:root {
+  --btn-accent: #4f46e5;
+  --btn-accent-hover: #4338ca;
+}
+
+button:not([class]),
+select {
+  padding: 0.55rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.65rem;
+  background: #fff;
+  color: #1f2937;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 8%);
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.1s ease;
+}
+
+button:not([class]) {
+  cursor: pointer;
+}
+
+select {
+  padding-right: 0.6rem;
+  cursor: pointer;
+}
+
+button:not([class]):hover:not(:disabled) {
+  border-color: #a5b4fc;
+  background: #eef2ff;
+  box-shadow: 0 2px 6px rgb(79 70 229 / 18%);
+}
+
+button:not([class]):active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+button:not([class])[type='submit'] {
+  border-color: transparent;
+  background: linear-gradient(135deg, #6366f1, var(--btn-accent));
+  color: #fff;
+  box-shadow: 0 2px 8px rgb(79 70 229 / 35%);
+}
+
+button:not([class])[type='submit']:hover:not(:disabled) {
+  border-color: transparent;
+  background: linear-gradient(135deg, #4f46e5, var(--btn-accent-hover));
+  box-shadow: 0 4px 12px rgb(79 70 229 / 45%);
+}
+
+button:not([class])[aria-pressed='true'] {
+  border-color: var(--btn-accent);
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+button:not([class]):disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 3px solid #a5b4fc;
+  outline-offset: 2px;
+}
