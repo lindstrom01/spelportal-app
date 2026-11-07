@@ -79,7 +79,7 @@ const features = [
       </ul>
     </section>
 
-    <footer class="footer">© Spelportalen · Fler spel på väg, bland annat backgammon.</footer>
+    <footer class="footer">© Spelportalen · Spela gratis direkt i webbläsaren.</footer>
   </main>
 </template>
 
